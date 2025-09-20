@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujjwal Kumar - Salesforce Consultant & Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f;
+            color: #8892b0;
+        }
+        .text-slate { color: #ccd6f6; }
+        .text-light-slate { color: #a8b2d1; }
+        .text-lightest-slate { color: #ccd6f6; }
+        .accent-color { color: #64ffda; }
+        .accent-bg { background-color: #64ffda; }
+        .accent-border { border-color: #64ffda; }
+        .light-navy { background-color: #112240; }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a192f; }
+        ::-webkit-scrollbar-thumb { background: #303C55; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #495670; }
+
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .nav-link:hover span, .nav-link.active span {
+            width: 64px;
+            background-color: #ccd6f6;
+        }
+        .nav-link:hover .nav-text, .nav-link.active .nav-text {
+            color: #ccd6f6;
+        }
+        .nav-indicator {
+            transition: all 0.2s ease-in-out;
+            width: 32px;
+            height: 2px;
+            background-color: #a8b2d1;
+        }
+        
+        .group:hover .group-hover\:text-accent,
+        .group:focus .group-hover\:text-accent {
+            color: #64ffda;
+        }
+
+        .group:hover .group-hover\:bg-slate-800\/50,
+        .group:focus .group-hover\:bg-slate-800\/50 {
+            background-color: rgba(30, 41, 59, 0.5);
+        }
+
+        .group:hover .group-hover\:shadow-\[inset_0_1px_0_0_rgba\(148\,163\,184\,0.1\)\] {
+            box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, 0.1);
+        }
+
+        .skill-tag {
+            background-color: rgba(100, 255, 218, 0.1);
+            color: #64ffda;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .section-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+    <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+        <div class="lg:flex lg:justify-between lg:gap-4">
+            <!-- Left Column: Header -->
+            <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+                <div>
+                    <h1 class="text-4xl font-extrabold tracking-tight text-slate sm:text-5xl">
+                        <a href="/">Ujjwal Kumar</a>
+                    </h1>
+                    <h2 class="mt-3 text-lg font-medium tracking-tight text-slate sm:text-xl">
+                        Salesforce Consultant & Architect
+                    </h2>
+                    <p class="mt-4 max-w-xs leading-normal">
+                        I build scalable, high-impact solutions on the Salesforce platform.
+                    </p>
+                    <nav class="nav hidden lg:block" aria-label="In-page navigation">
+                        <ul class="mt-16 w-max">
+                            <li>
+                                <a class="group flex items-center py-3 nav-link" href="#about">
+                                    <span class="nav-indicator mr-4"></span>
+                                    <span class="nav-text text-xs">About</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group flex items-center py-3 nav-link" href="#experience">
+                                    <span class="nav-indicator mr-4"></span>
+                                    <span class="nav-text text-xs">Experience</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group flex items-center py-3 nav-link" href="#projects">
+                                    <span class="nav-indicator mr-4"></span>
+                                    <span class="nav-text text-xs">Projects</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <ul class="ml-1 mt-8 flex items-center" aria-label="Social media">
+                    <li class="mr-5 text-xs">
+                        <a href="#" class="block hover:text-lightest-slate transition"><i data-lucide="github" class="w-6 h-6"></i></a>
+                    </li>
+                    <li class="mr-5 text-xs">
+                        <a href="#" class="block hover:text-lightest-slate transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    </li>
+                    <li class="mr-5 text-xs">
+                        <a href="#" class="block hover:text-lightest-slate transition"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Right Column: Main Content -->
+            <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
+                
+                <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 section-fade">
+                    <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 lg:hidden">
+                        <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">About</h2>
+                    </div>
+                    <p class="mb-4">
+                        As a Salesforce Consultant/Architect with over a decade in IT, my journey has been centered on driving global CRM and service transformations. My expertise spans across Sales, Service, Field Operations, and Warranty domains, allowing me to deliver comprehensive and scalable solutions.
+                    </p>
+                    <p class="mb-4">
+                        At Juniper Networks, I've had the privilege of leading the development of critical applications like Case Management, RMA, Renewals, and currently, the AgentForce service bot. Before that, at Deloitte, I was instrumental in developing ChangeScout, a proprietary change management platform adopted by Fortune 500 clients. I thrive on translating complex business needs into elegant, functional, and impactful Salesforce solutions.
+                    </p>
+                </section>
+                
+                <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 section-fade">
+                    <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 lg:hidden">
+                        <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
+                    </div>
+                    <div>
+                        <ol class="group/list">
+                            <li class="mb-12">
+                                <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                    <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block group-hover:bg-slate-800/50 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"></div>
+                                    <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide sm:col-span-2">Jan 2021 — Present</header>
+                                    <div class="z-10 sm:col-span-6">
+                                        <h3 class="font-medium leading-snug text-slate">
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-slate hover:accent-color focus-visible:accent-color group/link text-base" href="#" target="_blank" rel="noreferrer noopener">
+                                                <span>Assistant Consultant · <span class="inline-block">TCS (Juniper)</span></span>
+                                            </a>
+                                        </h3>
+                                        <p class="mt-2 text-sm leading-normal">Leading development of an intelligent bot (AgentForce) on the Einstein platform. I design and implement scalable Lightning Web Components (LWC) and Apex triggers, automate key business processes, and build custom dashboards to provide leadership with actionable performance insights.</p>
+                                        <ul class="mt-2 flex flex-wrap">
+                                            <li class="mr-1.5 mt-2"><span class="skill-tag">Agentforce</span></li>
+                                            <li class="mr-1.5 mt-2"><span class="skill-tag">LWC</span></li>
+                                            <li class="mr-1.5 mt-2"><span class="skill-tag">Apex</span></li>
+                                            <li class="mr-1.5 mt-2"><span class="skill-tag">Einstein</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-12">
+                                <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                    <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block group-hover:bg-slate-800/50 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"></div>
+                                    <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide sm:col-span-2">May 2019 — Dec 2020</header>
+                                    <div class="z-10 sm:col-span-6">
+                                        <h3 class="font-medium leading-snug text-slate">
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-slate hover:accent-color focus-visible:accent-color group/link text-base" href="#" target="_blank" rel="noreferrer noopener">
+                                                <span>Product Management Associate · <span class="inline-block">Deloitte</span></span>
+                                            </a>
+                                        </h3>
+                                        <p class="mt-2 text-sm leading-normal">Key developer for Deloitte’s proprietary 'ChangeScout' application on Salesforce Lightning. I managed the end-to-end project lifecycle, led workflow automation, custom object architecture, and user training sessions for internal teams and Fortune 500 client stakeholders.</p>
+                                        <ul class="mt-2 flex flex-wrap">
+                                             <li class="mr-1.5 mt-2"><span class="skill-tag">Salesforce</span></li>
+                                             <li class="mr-1.5 mt-2"><span class="skill-tag">ChangeScout</span></li>
+                                             <li class="mr-1.5 mt-2"><span class="skill-tag">Agile</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                             <li class="mb-12">
+                                <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                    <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block group-hover:bg-slate-800/50 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"></div>
+                                    <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide sm:col-span-2">Mar 2015 — May 2019</header>
+                                    <div class="z-10 sm:col-span-6">
+                                        <h3 class="font-medium leading-snug text-slate">
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-slate hover:accent-color focus-visible:accent-color group/link text-base" href="#" target="_blank" rel="noreferrer noopener">
+                                                <span>Application Developer · <span class="inline-block">IBM</span></span>
+                                            </a>
+                                        </h3>
+                                        <p class="mt-2 text-sm leading-normal">Developed custom Salesforce solutions and built responsive front-end UIs using AngularJS. Delivered robust automation test scripts with Selenium WebDriver. Awarded "Employee of the Month" for outstanding performance.</p>
+                                        <ul class="mt-2 flex flex-wrap">
+                                             <li class="mr-1.5 mt-2"><span class="skill-tag">AngularJS</span></li>
+                                             <li class="mr-1.5 mt-2"><span class="skill-tag">Selenium</span></li>
+                                             <li class="mr-1.5 mt-2"><span class="skill-tag">Salesforce Admin</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 section-fade">
+                    <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 lg:hidden">
+                        <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
+                    </div>
+                    <div>
+                        <ul class="group/list">
+                            <li class="mb-12">
+                                <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                    <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block group-hover:bg-slate-800/50 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"></div>
+                                    <div class="z-10 sm:order-2 sm:col-span-6">
+                                        <h3>
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-slate hover:accent-color focus-visible:accent-color group/link text-base" href="#" target="_blank" rel="noreferrer noopener">
+                                                <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                <span>AgentForce Service Application</span>
+                                            </a>
+                                        </h3>
+                                        <p class="mt-2 text-sm leading-normal">A responsive, device-agnostic support solution using AgentForce to deliver real-time chat assistance and task automation, enhancing operational efficiency.</p>
+                                    </div>
+                                    <img alt="AgentForce App" loading="lazy" width="200" height="48" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style="color:transparent" src="https://placehold.co/200x112/112240/64ffda?text=AgentForce">
+                                </div>
+                            </li>
+                             <li class="mb-12">
+                                <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                    <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block group-hover:bg-slate-800/50 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"></div>
+                                    <div class="z-10 sm:order-2 sm:col-span-6">
+                                        <h3>
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-slate hover:accent-color focus-visible:accent-color group/link text-base" href="#" target="_blank" rel="noreferrer noopener">
+                                                <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                <span>Juniper RMA & Renewal Apps</span>
+                                            </a>
+                                        </h3>
+                                        <p class="mt-2 text-sm leading-normal">Automated return/replacement processes and enabled proactive contract renewals, significantly improving operational efficiency and customer retention.</p>
+                                    </div>
+                                    <img alt="RMA & Renewal App" loading="lazy" width="200" height="48" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style="color:transparent" src="https://placehold.co/200x112/112240/64ffda?text=RMA+App">
+                                </div>
+                            </li>
+                             <li class="mb-12">
+                                <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                    <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block group-hover:bg-slate-800/50 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"></div>
+                                    <div class="z-10 sm:order-2 sm:col-span-6">
+                                        <h3>
+                                            <a class="inline-flex items-baseline font-medium leading-tight text-slate hover:accent-color focus-visible:accent-color group/link text-base" href="#" target="_blank" rel="noreferrer noopener">
+                                                <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                <span>Deloitte ChangeScout</span>
+                                            </a>
+                                        </h3>
+                                        <p class="mt-2 text-sm leading-normal">Deloitte’s flagship change management app, featuring stakeholder engagement modules, impact assessments, and communication tracking for enterprise transformations.</p>
+                                    </div>
+                                    <img alt="ChangeScout App" loading="lazy" width="200" height="48" class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style="color:transparent" src="https://placehold.co/200x112/112240/64ffda?text=ChangeScout">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <footer class="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+                    <p>Designed in Figma and coded in Visual Studio Code. Built with Tailwind CSS and deployed with Vercel. All text is set in the Inter typeface.</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('nav.nav a');
+            const fadeElems = document.querySelectorAll('.section-fade');
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: '-30% 0px -70% 0px' });
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+            
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElems.forEach(elem => {
+                fadeObserver.observe(elem);
+            });
+        });
+    </script>
+</body>
+</html>
